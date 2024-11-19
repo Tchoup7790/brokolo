@@ -1,0 +1,103 @@
+:root {
+  --color-white: #f2f2f2;
+  --color-black: #181818;
+  --color-purple: #a333d4;
+  --color-clear-purple: #d99bf3;
+
+  --color-divider-light-1: #c6c6c6;
+  --color-divider-light-2: #e7e7e7;
+  --color-divider-dark-1: #909090;
+  --color-divider-dark-2: #adadad;
+
+  --color-text-light-1: var(--color-black);
+  --color-text-light-2: #737373;
+  --color-text-dark-1: var(--color-white);
+  --color-text-dark-2: #9c9c9c;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-background: var(--color-white);
+    --color-background-soft: var(--color-white-soft);
+    --color-background-mute: var(--color-white-mute);
+
+    --color-border: var(--color-divider-light-1);
+    --color-border-soft: var(--color-divider-light-2);
+
+    --color-text: var(--color-text-light-1);
+    --color-text-soft: var(--color-text-light-2);
+
+    --color-primary: var(--color-purple);
+    --color-primary-soft: var(--color-clear-purple);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-black);
+    --color-background-soft: var(--color-black-soft);
+    --color-background-mute: var(--color-black-mute);
+
+    --color-border: var(--color-divider-dark-1);
+    --color-border-soft: var(--color-divider-dark-2);
+
+    --color-text: var(--color-text-dark-1);
+    --color-text-soft: var(--color-text-dark-2);
+
+    --color-primary: var(--color-clear-purple);
+    --color-primary-soft: var(--color-purple);
+  }
+}
+
+@font-face {
+  font-family: SaoTorpes;
+  src: url("./SaoTorpes.otf");
+}
+
+@font-face {
+  font-family: ProtoNerdFont;
+  src: url("./ProtoNerdFont.ttf");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: SaoTorpes;
+}
+
+@media (min-width: 425px) {
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    stroke 0.5s,
+    background-color 0.5s;
+  font-family: ProtoNerdFont, SaoTorpes;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

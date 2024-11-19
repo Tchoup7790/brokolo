@@ -1,0 +1,27 @@
+@import './base.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+#app {
+  width: 100vw;
+  overflow: hidden;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+  transition: 0.7s;
+  padding: 3px;
+  border-radius: 6px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+}
