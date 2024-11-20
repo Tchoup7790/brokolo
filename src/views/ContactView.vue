@@ -1,12 +1,13 @@
 <template>
   <main>
     <h1>Want to say Hi ?</h1>
+    <h2>Want to say Hi ?</h2>
     <article>
       <section>
         <a href="mailto:juliojuliobaptiste@gmail.com">juliojuliobaptiste@gmail.com</a>
         <a href="mailto:juliojuliobaptiste@gmail.com" class="button">send message</a>
       </section>
-      <section>
+      <section class="otherLink">
         <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">LinkedIn</a>
         <a href="https://github.com/Tchoup7790" target="_blank">Github</a>
       </section>
@@ -16,22 +17,32 @@
 
 <style scoped>
 main {
-  text-align: center
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  display: block;
+  padding-bottom: 15vh;
 }
 
 h1 {
   padding-bottom: 15vh;
+  display: none;
+  text-wrap: balance;
 }
 
 article {
   position: absolute;
-  right: 0;
-  bottom: 0;
   display: flex;
   width: fit-content;
-  gap: 7rem;
-  padding: 7rem 14rem;
-  transform-origin: right bottom;
+  bottom: 3rem;
+}
+
+article a {
+  text-transform: lowercase;
 }
 
 section {
@@ -42,9 +53,48 @@ section {
   align-items: start;
 }
 
+.otherLink {
+  display: none;
+}
+
 .button {
   padding: 0.75rem 2rem;
   color: var(--color-background);
   background-color: var(--color-text);
+}
+
+
+@media (min-width: 426px) {
+  h1 {
+    display: block;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  article {
+    right: 0;
+    bottom: 0;
+    padding: 7rem 14rem;
+    gap: 7rem;
+    transform-origin: right bottom;
+  }
+
+  article a {
+    text-transform: uppercase;
+  }
+
+  section {
+    gap: 2rem;
+  }
+
+}
+
+
+@media (min-width: 769px) {
+  .otherLink {
+    display: flex;
+  }
 }
 </style>

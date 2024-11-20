@@ -73,7 +73,40 @@ h4 {
   font-family: SaoTorpes;
 }
 
-@media (min-width: 425px) {
+h1 {
+  font-size: 1.4rem
+}
+
+h2 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 376px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+}
+
+
+@media (min-width: 769px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 1025px) {
   h1 {
     font-size: 7rem;
   }

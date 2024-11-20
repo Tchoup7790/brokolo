@@ -14,7 +14,7 @@ const props = defineProps({
       <p>
         <slot name="description"></slot>
       </p>
-      <a :href="url" target="_blank">Get the code</a>
+      <a :href="url" target="_blank">Want to see the code ?</a>
     </section>
     <img :src='img' alt="projet index">
   </article>
@@ -22,13 +22,13 @@ const props = defineProps({
 
 <style scoped>
 article {
-  height: 75vh;
+  height: fit-content;
   position: relative;
   display: flex;
   align-items: center;
   gap: 4rem;
   flex-direction: column;
-  padding: 15vw;
+  padding: 1rem;
   justify-content: space-around;
   width: 100vw;
   overflow: hidden;
@@ -37,7 +37,7 @@ article {
 section {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 div {
@@ -49,13 +49,26 @@ p {
 }
 
 img {
-  width: 35vw;
+  width: 90vw;
 }
 
+a {
+  text-transform: none;
+}
 
-@media (min-width: 425px) {
+@media (min-width: 769px) {
   article {
+    height: 75vh;
     flex-direction: row;
+    padding: 15vw;
+  }
+
+  section {
+    gap: 2rem;
+  }
+
+  img {
+    width: 35vw;
   }
 }
 </style>

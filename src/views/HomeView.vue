@@ -1,7 +1,7 @@
 <template>
   <Transition appear>
     <main>
-      <h1>Hello, I'M <span>Baptiste</span></h1>
+      <h1>Hello I'M <span>Baptiste</span></h1>
       <h1>A <span>Developer</span> and</h1>
       <h1><span>Student</span> who</h1>
       <h1>Create Website</h1>
@@ -11,15 +11,25 @@
 
 <style scoped>
 main {
-  text-align: center
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: start;
+  padding: 2rem;
 }
 
 h1 {
   position: relative;
+  height: fit-content;
+  line-height: 3.5rem;
+  text-wrap: balance;
 }
 
 span {
   position: relative;
+  height: fit-content;
+  width: fit-content;
   border-radius: 7px;
   overflow: hidden;
 }
@@ -28,7 +38,7 @@ span::before {
   position: absolute;
   content: " ";
   width: 100%;
-  height: 1.5rem;
+  height: 84%;
   left: 0;
   top: 0;
   z-index: -1;
@@ -53,9 +63,13 @@ span::before {
   transform: scaleX(0);
 }
 
-@media (min-width: 425px) {
-  span::before {
-    height: 5.5rem;
+@media (min-width: 1025px) {
+  main {
+    align-items: center;
+  }
+
+  h1 {
+    line-height: normal;
   }
 }
 </style>

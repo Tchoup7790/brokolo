@@ -9,8 +9,8 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
         <li><a href="#top">Fogow</a></li>
         <li><a href="#read_it">Read It</a></li>
         <li><a href="#cinemood">Cinemood</a></li>
-        <li><a href="#puissance">Puissances 4</a></li>
-        <li><a href="#moustiquaire">3 Moustiquaire</a></li>
+        <li><a href="#puissance">Puissances4</a></li>
+        <li><a href="#moustiquaire">3Moustiquaire</a></li>
         <li><a href="#pickomino">Pickomino</a></li>
         <li><a href="#particules">Particules</a></li>
       </ul>
@@ -89,16 +89,21 @@ main {
   padding: 4rem 0;
 }
 
+h2 {
+  text-wrap: balance;
+  padding: 1rem;
+}
+
 aside {
   position: fixed;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 10vw;
   z-index: 1;
-  left: 0;
+  left: 20px;
   top: 0;
 }
 
@@ -115,10 +120,23 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 5rem;
 }
 
 a {
   line-height: 2.5;
   text-transform: capitalize;
+}
+
+@media (min-width: 426px) {
+  div {
+    gap: 0;
+  }
+}
+
+@media (min-width: 1025px) {
+  aside {
+    display: flex;
+  }
 }
 </style>
