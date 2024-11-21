@@ -76,7 +76,7 @@ section {
   article {
     right: 0;
     bottom: 0;
-    padding: 7rem 14rem;
+    padding: 3.5rem 7rem;
     gap: 7rem;
     transform-origin: right bottom;
   }
@@ -95,6 +95,10 @@ section {
 @media (min-width: 769px) {
   .otherLink {
     display: flex;
+  }
+
+  article {
+    padding: 7rem 14rem;
   }
 }
 </style>

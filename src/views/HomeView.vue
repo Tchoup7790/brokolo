@@ -1,10 +1,10 @@
 <template>
   <Transition appear>
     <main>
-      <h1>Hello I'M <span>Baptiste</span></h1>
+      <h1>Hello I'M <span>Baptiste</span>,</h1>
       <h1>A <span>Developer</span> and</h1>
       <h1><span>Student</span> who</h1>
-      <h1>Create Website</h1>
+      <h1>Create Websites</h1>
     </main>
   </Transition>
 </template>

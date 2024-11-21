@@ -9,7 +9,7 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
         <li><a href="#top">Fogow</a></li>
         <li><a href="#read_it">Read It</a></li>
         <li><a href="#cinemood">Cinemood</a></li>
-        <li><a href="#puissance">Puissances4</a></li>
+        <li><a href="#puissance">Puissance4</a></li>
         <li><a href="#moustiquaire">3Moustiquaire</a></li>
         <li><a href="#pickomino">Pickomino</a></li>
         <li><a href="#particules">Particules</a></li>
@@ -40,18 +40,18 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
       </ProjectsArticle>
 
       <ProjectsArticle id="puissance" img="/puissances.png" url="https://github.com/Tchoup7790/SAE-puissanceQuatre">
-        <template #title>Puissances 4 </template>
+        <template #title>Puissance 4 </template>
         <template #description>
-          Puissances 4 is a solo project carried out as part of my studies, where I implemented the server logic for the
+          Puissance 4 is a solo project carried out as part of my studies, where I implemented the server logic for the
           board game “Puissance 4”. This project was realized in Go (Golang) and allows two players to compete online.
           The back-end manages the game logic, validation rules and game management. management.
         </template>
       </ProjectsArticle>
 
       <ProjectsArticle id="moustiquaire" img="moustiquaire.png" url="https://github.com/Tchoup7790/SAE-3Moustiquaire">
-        <template #title>3 Moustiquaire </template>
+        <template #title>3 Moustiquaires </template>
         <template #description>
-          3 Moustiquaire is a study project for groups of 4, involving the creation of a fictitious online sales site
+          3 Moustiquaires is a study project for groups of 4, involving the creation of a fictitious online sales site
           for luxury mosquito nets. The project is based on Laravel for the back-end, and a database provided by the
           school. We developed a complete e-commerce site, with product, user, order and payment management.
         </template>
@@ -60,7 +60,7 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
       <ProjectsArticle id="pickomino" img="/pickomino.png" url="https://github.com/Tchoup7790/SAE-Pickomino">
         <template #title>Pickomino </template>
         <template #description>
-          Pikomino is the digital adaptation of the famous board game, developed in a group of 4 using Kotlin and
+          Pickomino is the digital adaptation of the famous board game, developed in a group of 4 using Kotlin and
           JavaFX. The project involves recreating the rules of the game in an interactive, multiplayer version, with a
           graphical interface that simulates the physical experience of the game. The application allows several players
           to compete online, respecting the rules of the game and calculating scores in real time. This project enabled
