@@ -9,9 +9,9 @@ const toggleMenu = () => menu.value = !menu.value
   <!-- blank for keep space in header -->
   <br>
   <div class="menu">
-    <button v-if="!menu" @click="toggleMenu">[menu]</button>
+    <button v-if="!menu" @click="toggleMenu">OPEN MENU</button>
     <div class="nav" v-else="menu">
-      <button @click="toggleMenu">[close]</button>
+      <button @click="toggleMenu">CLOSE MENU</button>
       <nav>
         <RouterLink v-on:click="toggleMenu" to="/">
           <small>01</small>
@@ -59,7 +59,7 @@ nav {
   flex-direction: column;
   padding: 2rem;
   justify-content: center;
-  flex: 1;
+  flex: 3;
   gap: 3rem;
   font-size: 1rem;
 }
@@ -77,28 +77,23 @@ nav a.router-link-exact-active {
   color: var(--color-text);
 }
 
-.border {
-  height: 1px;
-  width: 100%;
-  background: var(--color-border);
-}
-
 footer {
   display: flex;
   width: 100%;
-  justify-content: start;
+  justify-content: center;
   padding: 2rem 4.5rem;
-  height: fit-content;
+  flex: 1;
   gap: 5rem;
   align-items: center;
 }
 
 button {
-  background-color: transparent;
+  background-color: var(--color-text);
   border: none;
-  font-size: 1rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
-  color: var(--color-text-soft);
+  border-radius: 6px;
+  color: var(--color-background);
 }
 
 @media (min-width: 1025px) {
