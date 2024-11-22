@@ -28,7 +28,7 @@ article {
   align-items: center;
   gap: 4rem;
   flex-direction: column;
-  padding: 1rem;
+  padding: 5vh 15vw;
   justify-content: space-around;
   width: 100vw;
   overflow: hidden;
@@ -49,18 +49,17 @@ p {
 }
 
 img {
-  width: 90vw;
+  width: 100%;
 }
 
 a {
   text-transform: none;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1025px) {
   article {
     height: 75vh;
     flex-direction: row;
-    padding: 15vw;
   }
 
   section {
@@ -70,5 +69,17 @@ a {
   img {
     width: 35vw;
   }
+}
+
+@media (min-width: 1441px) {
+  img {
+    flex: 1;
+    height: auto;
+  }
+
+  section {
+    flex: 1;
+  }
+
 }
 </style>

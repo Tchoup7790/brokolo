@@ -6,7 +6,7 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
   <main>
     <aside>
       <ul>
-        <li><a href="#top">Fogow</a></li>
+        <li><a href="#top">DORANCONET</a></li>
         <li><a href="#read_it">Read It</a></li>
         <li><a href="#cinemood">Cinemood</a></li>
         <li><a href="#puissance">Puissance4</a></li>
@@ -17,13 +17,23 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
     </aside>
     <div>
       <h2>Here are my projects</h2>
+      <ProjectsArticle id="DORANCONET" img="/doranconet.png" url="https://github.com/DevsAreAlsoHumans/DORANCONET">
+        <template #title>DORANCONET</template>
+        <template #description>
+          DORANCONET is a project started at school and realized in PHP. This application is a kind of mini social
+          network
+          based on a large database of people. It's built in PHP with a MySQL database and uses the Pico CSS library for
+          the front end. The application is still under development and will be deployed once we've reached a working
+          version.
+        </template>
+      </ProjectsArticle>
 
       <ProjectsArticle id="read_it" img="/read_it.png" url="https://github.com/Tchoup7790/Read-It">
         <template #title>Read_it</template>
         <template #description>
-          Read It is a personal project I created to practice native PHP. This application lets users create or read
-          articles and leave comments. It is built in PHP with a MySQL database and uses the Pico CSS library for the
-          front end.
+          Read It is a personal project I created to practice native PHP in preparation for the DORANCONET project. This
+          application allows users to create or read articles by leaving comments. It's built in PHP with a MySQL
+          database and uses the Pico CSS library for the front end.
         </template>
       </ProjectsArticle>
 
@@ -120,7 +130,7 @@ div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 a {
@@ -128,13 +138,13 @@ a {
   text-transform: capitalize;
 }
 
-@media (min-width: 426px) {
+
+
+@media (min-width: 1025px) {
   div {
     gap: 0;
   }
-}
 
-@media (min-width: 1025px) {
   aside {
     display: flex;
   }
