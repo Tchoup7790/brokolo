@@ -9,23 +9,22 @@
   --color-divider-dark-1: #909090;
   --color-divider-dark-2: #adadad;
 
-  --color-text-light-1: var(--color-black);
-  --color-text-light-2: #737373;
-  --color-text-dark-1: var(--color-white);
-  --color-text-dark-2: #9c9c9c;
+  --color-light-1: var(--color-black);
+  --color-light-2: #737373;
+  --color-dark-1: var(--color-white);
+  --color-dark-2: #9c9c9c;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --color-background: var(--color-white);
-    --color-background-soft: var(--color-white-soft);
-    --color-background-mute: var(--color-white-mute);
+    --color-background: var(--color-dark-1);
+    --color-background-soft: var(--color-dark-2);
 
     --color-border: var(--color-divider-light-1);
     --color-border-soft: var(--color-divider-light-2);
 
-    --color-text: var(--color-text-light-1);
-    --color-text-soft: var(--color-text-light-2);
+    --color-text: var(--color-light-1);
+    --color-text-soft: var(--color-light-2);
 
     --color-primary: var(--color-purple);
     --color-primary-soft: var(--color-clear-purple);
@@ -34,15 +33,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--color-black);
-    --color-background-soft: var(--color-black-soft);
-    --color-background-mute: var(--color-black-mute);
+    --color-background: var(--color-light-1);
+    --color-background-soft: var(--color-light-2);
 
     --color-border: var(--color-divider-dark-1);
     --color-border-soft: var(--color-divider-dark-2);
 
-    --color-text: var(--color-text-dark-1);
-    --color-text-soft: var(--color-text-dark-2);
+    --color-text: var(--color-dark-1);
+    --color-text-soft: var(--color-dark-2);
 
     --color-primary: var(--color-clear-purple);
     --color-primary-soft: var(--color-purple);
@@ -74,20 +72,37 @@ h4 {
 }
 
 h1 {
-  font-size: 1.4rem
+  font-size: 1.2rem
 }
 
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+}
+
+
+
+@media (min-width: 321px) {
+  h1 {
+    font-size: 1.4rem
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
 }
 
 @media (min-width: 376px) {
   h1 {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
   }
 }
 
@@ -102,7 +117,7 @@ h3 {
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -112,11 +127,7 @@ h3 {
   }
 
   h2 {
-    font-size: 3.5rem;
-  }
-
-  h3 {
-    font-size: 2rem;
+    font-size: 3.2rem;
   }
 }
 
