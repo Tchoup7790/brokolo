@@ -60,7 +60,12 @@ section {
 .button {
   padding: 0.75rem 2rem;
   color: var(--color-background);
-  background-color: var(--color-text);
+  background-color: var(--color-primary-soft);
+  transition: background-color .4s;
+}
+
+.button:hover {
+  background-color: var(--color-primary);
 }
 
 

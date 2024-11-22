@@ -17,6 +17,16 @@ a {
   transition: 0.7s;
   padding: 3px;
   border-radius: 6px;
+  transition: color .4s;
+}
+
+.router-link-exact-active {
+  transition: color .4s;
+}
+
+a:hover,
+a:hover.router-link-exact-active {
+  color: var(--color-primary);
 }
 
 @media (min-width: 1025px) {
