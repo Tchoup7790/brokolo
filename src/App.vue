@@ -2,6 +2,12 @@
 import { RouterView } from 'vue-router'
 import Menu from '@/components/Menu.vue';
 import BurgerMenu from '@/components/BurgerMenu.vue';
+import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
+import { useThemeStore } from '@/stores/themeStore';
+
+const themeStore = useThemeStore()
+
+themeStore.initializeTheme()
 </script>
 
 <template>
@@ -9,7 +15,7 @@ import BurgerMenu from '@/components/BurgerMenu.vue';
     <Menu />
     <BurgerMenu />
     <div>
-      <p class="city">
+      <p>
         Nantes [FR]
       </p>
       <ThemeSwitcher />
@@ -32,7 +38,14 @@ header {
   justify-content: space-between;
 }
 
-.city {
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+p {
+  height: 24px;
   color: var(--color-text-soft);
 }
 </style>

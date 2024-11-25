@@ -15,36 +15,32 @@
   --color-dark-2: #9c9c9c;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    --color-background: var(--color-dark-1);
-    --color-background-soft: var(--color-dark-2);
+[data-theme="light"] {
+  --color-background: var(--color-dark-1);
+  --color-background-soft: var(--color-dark-2);
 
-    --color-border: var(--color-divider-light-1);
-    --color-border-soft: var(--color-divider-light-2);
+  --color-border: var(--color-divider-light-1);
+  --color-border-soft: var(--color-divider-light-2);
 
-    --color-text: var(--color-light-1);
-    --color-text-soft: var(--color-light-2);
+  --color-text: var(--color-light-1);
+  --color-text-soft: var(--color-light-2);
 
-    --color-primary: var(--color-purple);
-    --color-primary-soft: var(--color-clear-purple);
-  }
+  --color-primary: var(--color-purple);
+  --color-primary-soft: var(--color-clear-purple);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--color-light-1);
-    --color-background-soft: var(--color-light-2);
+[data-theme="dark"] {
+  --color-background: var(--color-light-1);
+  --color-background-soft: var(--color-light-2);
 
-    --color-border: var(--color-divider-dark-1);
-    --color-border-soft: var(--color-divider-dark-2);
+  --color-border: var(--color-divider-dark-1);
+  --color-border-soft: var(--color-divider-dark-2);
 
-    --color-text: var(--color-dark-1);
-    --color-text-soft: var(--color-dark-2);
+  --color-text: var(--color-dark-1);
+  --color-text-soft: var(--color-dark-2);
 
-    --color-primary: var(--color-clear-purple);
-    --color-primary-soft: var(--color-purple);
-  }
+  --color-primary: var(--color-clear-purple);
+  --color-primary-soft: var(--color-purple);
 }
 
 @font-face {
