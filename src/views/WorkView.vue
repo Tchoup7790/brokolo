@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import ProjectsArticle from '@/components/ProjectsArticle.vue';
 </script>
 

@@ -1,7 +1,7 @@
 <script setup>
 import { RouterView } from 'vue-router'
-import Menu from './components/Menu.vue';
-import BurgerMenu from './components/BurgerMenu.vue';
+import Menu from '@/components/Menu.vue';
+import BurgerMenu from '@/components/BurgerMenu.vue';
 </script>
 
 <template>
@@ -12,6 +12,7 @@ import BurgerMenu from './components/BurgerMenu.vue';
       <p class="city">
         Nantes [FR]
       </p>
+      <ThemeSwitcher />
     </div>
   </header>
 

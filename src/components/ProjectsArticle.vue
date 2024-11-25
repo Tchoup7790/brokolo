@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 const props = defineProps({
   img: String,
   url: String,
@@ -50,6 +50,7 @@ p {
 
 img {
   width: 100%;
+  border-radius: 6px;
 }
 
 a {
