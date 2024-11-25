@@ -1,11 +1,13 @@
 @import './base.css';
+@import './font.css';
 
 html {
+  height: -webkit-fill-available;
   scroll-behavior: smooth;
 }
 
 #app {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   font-weight: normal;
 }
@@ -27,11 +29,4 @@ a {
 a:hover,
 a:hover.router-link-exact-active {
   color: var(--color-primary);
-}
-
-@media (min-width: 1025px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
 }
