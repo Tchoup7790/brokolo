@@ -1,10 +1,10 @@
 <script setup>
-import ToTopMotion from '@/components/motion/ToTopMotion.vue';
+import SwitchTextMotion from '@/components/motion/SwitchTextMotion.vue';
 </script>
 
 <template>
   <main>
-    <ToTopMotion text="LoremImpedit" font-size="18" />
+    <SwitchTextMotion text="LoremImpedit" />
   </main>
 </template>
 

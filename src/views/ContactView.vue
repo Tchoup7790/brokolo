@@ -1,15 +1,27 @@
+<script setup lang="ts">
+import SwitchTextMotion from '@/components/motion/SwitchTextMotion.vue';
+</script>
+
 <template>
   <main>
     <h1>Want to say Hi ?</h1>
     <h2>Want to say Hi ?</h2>
     <article>
       <section>
-        <a href="mailto:juliojuliobaptiste@gmail.com">juliojuliobaptiste@gmail.com</a>
-        <a href="mailto:juliojuliobaptiste@gmail.com" class="button">send message</a>
+        <a href="mailto:juliojuliobaptiste@gmail.com">
+          <SwitchTextMotion text="juliojuliobaptiste@gmail.com" />
+        </a>
+        <a href="mailto:juliojuliobaptiste@gmail.com" class="button">
+          <SwitchTextMotion text="sendmessage" />
+        </a>
       </section>
       <section class="otherLink">
-        <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Tchoup7790" target="_blank">Github</a>
+        <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">
+          <SwitchTextMotion text="Linkedin" />
+        </a>
+        <a href="https://github.com/tchoup7790" target="_blank">
+          <SwitchTextMotion text="github" />
+        </a>
       </section>
     </article>
   </main>
@@ -41,7 +53,7 @@ article {
 }
 
 article a {
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 
 section {
@@ -83,10 +95,6 @@ section {
     padding: 3.5rem 7rem;
     gap: 7rem;
     transform-origin: right bottom;
-  }
-
-  article a {
-    text-transform: uppercase;
   }
 
   section {

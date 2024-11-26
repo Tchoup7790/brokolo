@@ -1,4 +1,6 @@
 <script setup>
+import SwitchTextMotion from './motion/SwitchTextMotion.vue';
+
 const props = defineProps({
   img: String,
   url: String,
@@ -14,7 +16,9 @@ const props = defineProps({
       <p>
         <slot name="description"></slot>
       </p>
-      <a :href="url" target="_blank">Want to see the code ?</a>
+      <a :href="url" target="_blank">
+        <SwitchTextMotion text="WantToSeeTheCode?" />
+      </a>
     </section>
     <img :src='img' alt="projet index">
   </article>
@@ -55,6 +59,7 @@ img {
 
 a {
   text-transform: none;
+  width: 100%;
 }
 
 @media (min-width: 1025px) {

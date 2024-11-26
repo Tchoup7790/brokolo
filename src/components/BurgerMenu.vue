@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
-import ToTopMotion from './motion/ToTopMotion.vue';
+import ToTopMotion from '@/components/motion/ToTopMotion.vue';
+import SwitchTextMotion from '@/components/motion/SwitchTextMotion.vue';
 
 const menu = ref(false)
 const toggleMenu = () => menu.value = !menu.value
@@ -33,8 +34,12 @@ const toggleMenu = () => menu.value = !menu.value
       </nav>
       <div class="border"></div>
       <footer>
-        <a href="https://github.com/Tchoup7790" target="_blank">Github</a>
-        <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/tchoup7790" target="_blank">
+          <SwitchTextMotion text="github" />
+        </a>
+        <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">
+          <SwitchTextMotion text="Linkedin" />
+        </a>
       </footer>
     </div>
   </div>
