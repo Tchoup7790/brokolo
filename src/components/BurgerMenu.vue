@@ -14,34 +14,36 @@ const toggleMenu = () => menu.value = !menu.value
     <button v-if="!menu" @click="toggleMenu">
       <ToTopMotion text="OPEN MENU" />
     </button>
-    <div class="nav" v-else="menu">
-      <button @click="toggleMenu">
-        <ToTopMotion text="CLOSE MENU" />
-      </button>
-      <nav>
-        <RouterLink v-on:click="toggleMenu" to="/">
-          <small>01</small>
-          Home
-        </RouterLink>
-        <RouterLink v-on:click="toggleMenu" to="/work">
-          <small>02</small>
-          Work
-        </RouterLink>
-        <RouterLink v-on:click="toggleMenu" to="/contact">
-          <small>03</small>
-          Contact
-        </RouterLink>
-      </nav>
-      <div class="border"></div>
-      <footer>
-        <a href="https://github.com/tchoup7790" target="_blank">
-          <SwitchTextMotion text="github" />
-        </a>
-        <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">
-          <SwitchTextMotion text="Linkedin" />
-        </a>
-      </footer>
-    </div>
+    <Transition appear>
+      <div class="nav" v-if="menu">
+        <button @click="toggleMenu">
+          <ToTopMotion text="CLOSE MENU" />
+        </button>
+        <nav>
+          <RouterLink v-on:click="toggleMenu" to="/">
+            <small>01</small>
+            Home
+          </RouterLink>
+          <RouterLink v-on:click="toggleMenu" to="/work">
+            <small>02</small>
+            Work
+          </RouterLink>
+          <RouterLink v-on:click="toggleMenu" to="/contact">
+            <small>03</small>
+            Contact
+          </RouterLink>
+        </nav>
+        <div class="border"></div>
+        <footer>
+          <a href="https://github.com/tchoup7790" target="_blank">
+            <SwitchTextMotion text="github" />
+          </a>
+          <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">
+            <SwitchTextMotion text="Linkedin" />
+          </a>
+        </footer>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -61,6 +63,16 @@ const toggleMenu = () => menu.value = !menu.value
   height: 100vh;
   width: 100vw;
   background-color: var(--color-background);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: transform 0.7s 0.5s ease-in;
+}
+
+.v-enter-from,
+.v-leave-to {
+  transform: translateY(-100%);
 }
 
 nav {

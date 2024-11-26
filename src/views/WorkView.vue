@@ -1,4 +1,5 @@
 <script setup>
+import TopOpacityMotion from '@/components/motion/TopOpacityMotion.vue';
 import ProjectsArticle from '@/components/ProjectsArticle.vue';
 </script>
 
@@ -16,7 +17,9 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
       </ul>
     </aside>
     <div>
-      <h2>Here are my projects</h2>
+      <TopOpacityMotion delay="0">
+        <h2>Here are my projects</h2>
+      </TopOpacityMotion>
       <ProjectsArticle id="DORANCONET" img="/doranconet.png" url="https://github.com/DevsAreAlsoHumans/DORANCONET">
         <template #title>DORANCONET</template>
         <template #description>

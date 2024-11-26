@@ -1,10 +1,10 @@
 <script setup>
-import SwitchTextMotion from '@/components/motion/SwitchTextMotion.vue';
+import TopOpacity from '@/components/motion/TopOpacity.vue';
 </script>
 
 <template>
   <main>
-    <SwitchTextMotion text="LoremImpedit" />
+    <TopOpacity text="LoremImpedit" />
   </main>
 </template>
 

@@ -1,12 +1,15 @@
-<script setup lang="ts">
+<script setup>
 import SwitchTextMotion from '@/components/motion/SwitchTextMotion.vue';
+import TopOpacityMotion from '@/components/motion/TopOpacityMotion.vue';
 </script>
 
 <template>
   <main>
-    <h1>Want to say Hi ?</h1>
-    <h2>Want to say Hi ?</h2>
-    <article>
+    <TopOpacityMotion delay="0">
+      <h1>Want to say Hi ?</h1>
+    </TopOpacityMotion>
+    <article v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { duration: 1200 } }"
+      :leave="{ opacity: 0, transition: { duration: 200 } }">
       <section>
         <a href="mailto:juliojuliobaptiste@gmail.com">
           <SwitchTextMotion text="juliojuliobaptiste@gmail.com" />
@@ -26,7 +29,6 @@ import SwitchTextMotion from '@/components/motion/SwitchTextMotion.vue';
     </article>
   </main>
 </template>
-
 <style scoped>
 main {
   display: flex;
@@ -34,14 +36,9 @@ main {
   justify-content: center;
 }
 
-h2 {
-  display: block;
-  padding-bottom: 15vh;
-}
-
 h1 {
   padding-bottom: 15vh;
-  display: none;
+  display: block;
   text-wrap: balance;
 }
 
@@ -81,14 +78,6 @@ section {
 
 
 @media (min-width: 426px) {
-  h1 {
-    display: block;
-  }
-
-  h2 {
-    display: none;
-  }
-
   article {
     right: 0;
     bottom: 0;

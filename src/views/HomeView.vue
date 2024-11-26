@@ -1,10 +1,22 @@
+<script setup>
+import TopOpacityMotion from '@/components/motion/TopOpacityMotion.vue';
+</script>
+
 <template>
   <Transition appear>
     <main>
-      <h1>Hello I'M <span>Baptiste</span>,</h1>
-      <h1>A <span>Developer</span> and</h1>
-      <h1><span>Student</span> who</h1>
-      <h1>Create Websites</h1>
+      <TopOpacityMotion delay="0">
+        <h1>Hello I'M <span>Baptiste</span>,</h1>
+      </TopOpacityMotion>
+      <TopOpacityMotion delay="200">
+        <h1>A <span>Developer</span> and</h1>
+      </TopOpacityMotion>
+      <TopOpacityMotion delay="400">
+        <h1><span>Student</span> who</h1>
+      </TopOpacityMotion>
+      <TopOpacityMotion delay="600">
+        <h1>Create Websites</h1>
+      </TopOpacityMotion>
     </main>
   </Transition>
 </template>
@@ -50,11 +62,6 @@ span::before {
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.6s ease;
-}
-
-.v-enter-from,
-.v-leave-to {
-  opacity: 0;
 }
 
 .v-enter-from span::before,
