@@ -7,9 +7,9 @@ import ContactView from '@/views/ContactView.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-  { path: '/', component: HomeView },
-  { path: '/work', component: WorkView },
-  { path: '/contact', component: ContactView }
+    { path: '/', component: HomeView },
+    { path: '/work', component: WorkView },
+    { path: '/contact', component: ContactView }
   ],
 })
 

@@ -1,18 +1,22 @@
+<script setup lang="ts">
+import ToTopMotion from './motion/ToTopMotion.vue';
+</script>
+
 <template>
   <!-- blank for keep space in header -->
   <br>
   <nav>
     <RouterLink to="/">
-      <small>01</small>
-      Home
+      <small>01 </small>
+      <ToTopMotion text="Home" />
     </RouterLink>
     <RouterLink to="/work">
-      <small>02</small>
-      Work
+      <small>02 </small>
+      <ToTopMotion text="Work" />
     </RouterLink>
     <RouterLink to="/contact">
-      <small>03</small>
-      Contact
+      <small>03 </small>
+      <ToTopMotion text="Contact" />
     </RouterLink>
   </nav>
 </template>

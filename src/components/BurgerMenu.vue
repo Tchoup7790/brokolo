@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import ToTopMotion from './motion/ToTopMotion.vue';
 
 const menu = ref(false)
 const toggleMenu = () => menu.value = !menu.value
@@ -9,9 +10,13 @@ const toggleMenu = () => menu.value = !menu.value
   <!-- blank for keep space in header -->
   <br>
   <div class="menu">
-    <button v-if="!menu" @click="toggleMenu">OPEN MENU</button>
+    <button v-if="!menu" @click="toggleMenu">
+      <ToTopMotion text="OPEN MENU" />
+    </button>
     <div class="nav" v-else="menu">
-      <button @click="toggleMenu">CLOSE MENU</button>
+      <button @click="toggleMenu">
+        <ToTopMotion text="CLOSE MENU" />
+      </button>
       <nav>
         <RouterLink v-on:click="toggleMenu" to="/">
           <small>01</small>
