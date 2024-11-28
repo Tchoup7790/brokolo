@@ -15,21 +15,48 @@ const toggleTheme = () => {
 
 <template>
   <button @click="toggleTheme">
-    <MoonIcon v-if="currentTheme == 'light'" />
-    <SunIcon v-else />
+    <SunIcon v-if="currentTheme == 'light'" />
+    <MoonIcon v-else />
+    <span>
+      <MoonIcon v-if="currentTheme == 'light'" />
+      <SunIcon v-else />
+    </span>
   </button>
 </template>
 
 <style scoped>
 button {
+  position: relative;
   background: transparent;
   border: none;
   margin: 0;
   padding: 0;
-  height: fit-content;
-  width: fit-content;
+  overflow: hidden;
   cursor: pointer;
   stroke: var(--color-text-soft);
   padding: .2rem;
+  transition: .4s;
+}
+
+svg {
+  position: relative;
+  transition: .4s;
+}
+
+button:hover {
+  stroke: var(--color-primary);
+}
+
+button:hover svg {
+  transform: translateY(-40px);
+}
+
+span {
+  position: absolute;
+  height: fit-content;
+  width: fit-content;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -40px;
 }
 </style>

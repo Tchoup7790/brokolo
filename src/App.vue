@@ -4,6 +4,7 @@ import Menu from '@/components/Menu.vue';
 import BurgerMenu from '@/components/BurgerMenu.vue';
 import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
 import { useThemeStore } from '@/stores/themeStore';
+import ToTopMotion from './components/motion/ToTopMotion.vue';
 
 const themeStore = useThemeStore()
 
@@ -12,14 +13,15 @@ themeStore.initializeTheme()
 
 <template>
   <header>
+    <!-- blank for keep space in header -->
+    <div></div>
     <Menu />
     <BurgerMenu />
-    <div>
-      <p>
-        Nantes [FR]
-      </p>
-      <ThemeSwitcher />
-    </div>
+    <ThemeSwitcher />
+    <a href="https://maps.app.goo.gl/yzadPPtGPbPZSY616" target="_blank" class="topLeft">
+      <ToTopMotion text="Nantes" />
+      <p>[FR]</p>
+    </a>
   </header>
 
   <RouterView />
@@ -35,17 +37,21 @@ header {
   width: 100vw;
   padding: 1rem;
   display: inline-flex;
-  justify-content: space-between;
 }
 
-div {
+header>* {
+  flex: 1;
+}
+
+.topLeft {
   display: flex;
-  flex-direction: column;
-  align-items: end;
+  gap: 0.2rem;
+  align-items: center;
+  justify-content: end;
+  color: var(--color-text-soft);
 }
 
 p {
-  height: 24px;
   color: var(--color-text-soft);
 }
 </style>

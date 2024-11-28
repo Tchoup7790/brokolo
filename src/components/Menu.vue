@@ -3,8 +3,6 @@ import ToTopMotion from './motion/ToTopMotion.vue';
 </script>
 
 <template>
-  <!-- blank for keep space in header -->
-  <br>
   <nav>
     <RouterLink to="/">
       <small>01 </small>
