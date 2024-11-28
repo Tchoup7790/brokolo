@@ -35,7 +35,7 @@ const toggleMenu = () => menu.value = !menu.value
         <div class="border"></div>
         <footer>
           <a href="https://github.com/tchoup7790" target="_blank">
-            <SwitchTextMotion text="github" />
+            <SwitchTextMotion text="Github" />
           </a>
           <a href="https://www.linkedin.com/in/baptiste-julio-595823132/" target="_blank">
             <SwitchTextMotion text="Linkedin" />
@@ -49,6 +49,7 @@ const toggleMenu = () => menu.value = !menu.value
 <style scoped>
 .menu {
   position: fixed;
+  z-index: 4;
 }
 
 .nav {
