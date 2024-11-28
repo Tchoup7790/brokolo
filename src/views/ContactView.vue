@@ -7,6 +7,7 @@ import TopOpacityMotion from '@/components/motion/TopOpacityMotion.vue';
   <main>
     <TopOpacityMotion delay="0">
       <h1>Want to say Hi ?</h1>
+      <h2>Want to say Hi ?</h2>
     </TopOpacityMotion>
     <article v-motion :initial="{ opacity: 0 }" :enter="{ opacity: 1, transition: { duration: 1200 } }"
       :leave="{ opacity: 0, transition: { duration: 200 } }">
@@ -36,9 +37,14 @@ main {
   justify-content: center;
 }
 
+h2 {
+  display: block;
+  padding-bottom: 15vh;
+}
+
 h1 {
   padding-bottom: 15vh;
-  display: block;
+  display: none;
   text-wrap: balance;
 }
 
@@ -78,6 +84,14 @@ section {
 
 
 @media (min-width: 426px) {
+  h1 {
+    display: block;
+  }
+
+  h2 {
+    display: none;
+  }
+
   article {
     right: 0;
     bottom: 0;

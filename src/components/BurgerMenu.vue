@@ -9,9 +9,8 @@ const toggleMenu = () => menu.value = !menu.value
 
 <template>
   <!-- blank for keep space in header -->
-  <br>
   <div class="menu">
-    <button v-if="!menu" @click="toggleMenu">
+    <button @click="toggleMenu">
       <ToTopMotion text="OPEN MENU" />
     </button>
     <Transition appear>

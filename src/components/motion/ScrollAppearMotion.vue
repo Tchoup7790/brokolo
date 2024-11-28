@@ -13,44 +13,24 @@ onMounted(() => {
     const delay = index * 50
     const { apply } = useMotion(target, {
       initial: {
-        y: 20,
+        opacity: 0
       },
-      enter: {
-        y: 0,
+      visibleOnce: {
+        opacity: 1,
         transition: {
           delay: delay,
         },
       },
     })
-
-    lettersRef.value[index].hover = async () => {
-      await apply({
-        y: -20,
-        transition: {
-          delay: delay,
-        },
-      })
-      setTimeout(() => {
-        apply("enter")
-      }, 900)
-    }
   })
 })
 
-const hover = () => {
-  lettersRef.value.forEach((letter) => {
-    letter.hover()
-  });
-};
 </script>
 
 <template>
-  <div @mouseover="hover">
+  <div>
     <p v-for="(letter) in letters" ref="letter">
       {{ letter }}
-      <span>
-        {{ letter }}
-      </span>
     </p>
   </div>
 </template>
@@ -66,14 +46,6 @@ div {
 
 p {
   position: relative;
-  transition: .35s;
-}
-
-span {
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: fit-content;
-  height: fit-content;
+  transition: 5s;
 }
 </style>
