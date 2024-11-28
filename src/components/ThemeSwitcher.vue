@@ -47,16 +47,23 @@ button:hover {
   stroke: var(--color-primary);
 }
 
-button:hover svg {
-  transform: translateY(-40px);
+span {
+  display: none;
 }
 
-span {
-  position: absolute;
-  height: fit-content;
-  width: fit-content;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: -40px;
+@media (min-width: 1025px) {
+  button:hover svg {
+    transform: translateY(-40px);
+  }
+
+  span {
+    display: block;
+    position: absolute;
+    height: fit-content;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -40px;
+  }
 }
 </style>

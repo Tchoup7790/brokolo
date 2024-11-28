@@ -11,7 +11,7 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
         <li><a href="#read_it">Read It</a></li>
         <li><a href="#cinemood">Cinemood</a></li>
         <li><a href="#puissance">Puissance4</a></li>
-        <li><a href="#moustiquaire">3Moustiquaire</a></li>
+        <li><a href="#moustiquaires">3Moustiquaires</a></li>
         <li><a href="#pickomino">Pickomino</a></li>
         <li><a href="#particules">Particules</a></li>
       </ul>
@@ -61,7 +61,7 @@ import ProjectsArticle from '@/components/ProjectsArticle.vue';
         </template>
       </ProjectsArticle>
 
-      <ProjectsArticle id="moustiquaire" img="moustiquaire.png" url="https://github.com/Tchoup7790/SAE-3Moustiquaire">
+      <ProjectsArticle id="moustiquaires" img="moustiquaire.png" url="https://github.com/Tchoup7790/SAE-3Moustiquaire">
         <template #title>3 Moustiquaires </template>
         <template #description>
           3 Moustiquaires is a study project for groups of 4, involving the creation of a fictitious online sales site
