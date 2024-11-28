@@ -112,7 +112,7 @@ aside {
   display: none;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   height: 100vh;
   width: 10vw;
   z-index: 1;

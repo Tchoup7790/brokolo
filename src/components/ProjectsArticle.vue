@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <article>
+  <article v-motion-slide-visible-once-bottom>
     <section>
       <h3>
         <slot name="title"></slot>
@@ -36,16 +36,13 @@ article {
   justify-content: space-around;
   width: 100vw;
   overflow: hidden;
+  transition: .6s;
 }
 
 section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-div {
-  width: 35vw;
 }
 
 p {
